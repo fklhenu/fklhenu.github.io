@@ -50,7 +50,7 @@
 				z-index: 50;
 			}
 			canvas{
-				position: absolute;
+				position: fixed;
 				top: 0;
 				left: 0;
 			}
@@ -141,15 +141,15 @@
 		<canvas></canvas>
 		<script type="text/javascript">
 			$(function() {
-				function iframeSize() {
-					$("iframe").css({
-						height: $(window).height() - 50
-					})
-				}
-				iframeSize()
-				$(window).on("resize", function() {
-					iframeSize()
-				}) 
+//				function iframeSize() {
+//					$("iframe").css({
+//						height: $(window).height() - 50
+//					})
+//				}
+//				iframeSize()
+//				$(window).on("resize", function() {
+//					iframeSize()
+//				}) 
 				$("a[href='javascript:;']").click(function() {
 					$("iframe").attr("src", $(this).attr("data_href"))
 				}) 
