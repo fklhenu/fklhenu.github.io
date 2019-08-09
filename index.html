@@ -154,7 +154,7 @@
 				function iframeTextChang(){
 					$(".container_iframe").empty();
 					$("#mf").contents().find("body").children().appendTo(".container_iframe")
-					$("#mf").contents().find("head link").appendTo("head")
+					$("#mf").contents().find("head link[rel='stylesheet']").appendTo("head")
 				}
 				$("a[href='javascript:;']").click(function() {
 					$("iframe").attr("src", $(this).attr("data_href"))
