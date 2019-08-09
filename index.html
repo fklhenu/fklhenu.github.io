@@ -13,74 +13,7 @@
 		<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<script src="https://hm.baidu.com/hm.js?9bb1efd9da97543aa201f16c2cdf9a1f"></script>
-		<!--canvas-->
-		<style type="text/css">
-			body {
-				/*background-color: #ecf0f1 !important;*/
-				overflow: auto;
-			}
-			p{
-				color: black;
-			}
-			.navbar {
-				background-color: #0593d3 !important;
-				border: none !important;
-				margin-bottom: 0 !important;
-				position: relative;
-				z-index: 50;
-			}
-			
-			.navbar-toggle {
-				background-color: #f0f0f0;
-			}
-			
-			.navbar-toggle .icon-bar {
-				background-color: #0593d3;
-			}
-			
-			iframe {
-				width: 0;
-				height: 0;
-				margin: 0;
-				padding: 0;
-				border: none;
-				outline: none;
-			}
-			.container_iframe{
-				position: relative;
-				z-index: 5;
-				/*background-color: rgba(255,255,255,0.5);*/
-			}
-			canvas{
-				position: fixed;
-				top: 0;
-				left: 0;
-			}
-			.gotop{
-				display: none;
-				animation:gotop 1s alternate-reverse infinite linear;
-				color: dodgerblue;
-				font-size: 10vw;
-				position: fixed;
-				right: 5vw;
-				bottom: 5vh;
-				z-index: 5;
-				padding: 0 10px;
-				cursor: pointer;
-			}
-			@keyframes gotop{
-				from{
-					opacity: 1;
-					transform: scale(1.3);
-					text-shadow: 0 0 10px pink;
-				}
-				to{
-					opacity: 0.3;
-					transform: scale(1);
-					text-shadow: 0 0 0;
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="index.css" />
 	</head>
 
 	<body>
@@ -169,48 +102,7 @@
 		</div>
 		<iframe src="http://www.1993sc.com/html5" name="mf" id="mf"></iframe>
 		<canvas></canvas>
-		<script type="text/javascript">
-			$(function() {
-
-				function iframeTextChang(){
-					$(".container_iframe").empty().css({
-						"z-index":1
-					});
-					$("#mf").contents().find("body").children().appendTo(".container_iframe")
-					$("#mf").contents().find("head link[rel='stylesheet']").appendTo("head")
-				}
-				$("a[href='javascript:;']").click(function() {
-					$("iframe").attr("src", $(this).attr("data_href"))
-				}) 
-				
-				$("iframe").load(function(){
-					iframeTextChang()
-				})
-				
-				$(document).on("touchmove", function(e) {
-					e.preventDefault() 
-					e.stopPropagation() 
-					return false
-				})
-				
-				$(".gotop").click(function(){
-							$("body,html").stop().animate({
-								scrollTop:10
-							},"slow")
-						})
-				$(window).scroll(function(){
-					if($(this).scrollTop()>600){
-						$(".gotop").css({
-							display:"block"
-						})
-					}else{
-						$(".gotop").css({
-							display:"none"
-						})
-					}
-				})
-			})
-		</script>
+		<script src="index.js"></script>
 		<script src="canvas.min.js"></script>
 	</body>
 
