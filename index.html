@@ -195,9 +195,13 @@
 						$(".gotop").css({
 							display:"block"
 						}).click(function(){
-							$("body,html").animate({
-								scrollTop:"0"
+							$("body,html").stop().animate({
+								scrollTop:"10"
 							},300)
+						})
+					}else{
+						$(".gotop").css({
+							display:"none"
 						})
 					}
 				})
