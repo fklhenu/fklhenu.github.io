@@ -25,7 +25,7 @@
 				border: none !important;
 				margin-bottom: 0 !important;
 				position: relative;
-				z-index: 50;
+				z-index: 5;
 			}
 			
 			.navbar-toggle {
@@ -37,11 +37,16 @@
 			}
 			
 			iframe {
-				display: none;
+				width: 0;
+				height: 0;
+				margin: 0;
+				padding: 0;
+				border: none;
+				outline: none;
 			}
 			.container_iframe{
 				position: relative;
-				z-index: 50;
+				z-index: 5;
 				background-color: rgba(255,255,255,0.5);
 			}
 			canvas{
@@ -131,8 +136,9 @@
 			<!-- /.container-fluid -->
 		</nav>
 		<div class="container container_iframe">
-			<iframe src="http://www.1993sc.com/html5" name="mf" id="mf"></iframe>
+			
 		</div>
+		<iframe src="http://www.1993sc.com/html5" name="mf" id="mf"></iframe>
 		<canvas></canvas>
 		<script type="text/javascript">
 			$(function() {
@@ -145,30 +151,23 @@
 //				$(window).on("resize", function() {
 //					iframeSize()
 //				}) 
+				function iframeTextChang(){
+					$(".container_iframe").empty();
+					$("#mf").contents().find("body").children().appendTo(".container_iframe")
+					$("#mf").contents().find("head link").appendTo("head")
+				}
 				$("a[href='javascript:;']").click(function() {
 					$("iframe").attr("src", $(this).attr("data_href"))
 				}) 
+				
+				$("iframe").load(function(){
+					iframeTextChang()
+				})
+				
 				$(document).on("touchmove", function(e) {
 					e.preventDefault() 
 					e.stopPropagation() 
 					return false
-				})
-				$("iframe").load(function(){
-//					var iframe = window.frames["iframe中的name值"].document.getElementById("iframe中控件的id").事件();
-//					$("#iframe的id").contents().find("#iframe中控件的id").事件();
-//					var iframe = document.getElementById("mf").contentWindow.document.documentElement
-					//将iframe中的css 与 js 添加到父页面
-					$("#mf").contents().find("body").children().appendTo(".container_iframe")
-					$("#mf").contents().find("head link").appendTo("head")
-					$("#mf").contents().find("head link").find("body").css({
-						backgroundColor:"rgba(255,255,255,0)"
-					})
-//					$("#mf").contents().find("head script").appendTo("head")
-//					$("#mf").contents().find("body script").appendTo("body")
-//					$("iframe").remove()
-//					var iframee = window.frames["mf"].document
-//					console.log(iframee)
-//					iframee.appendTo("head")
 				})
 			})
 		</script>
