@@ -54,6 +54,30 @@
 				top: 0;
 				left: 0;
 			}
+			.gotop{
+				display: none;
+				animation:gotop 1s alternate-reverse infinite linear;
+				color: dodgerblue;
+				font-size: 10vw;
+				position: fixed;
+				right: 5vw;
+				bottom: 5vh;
+				z-index: 5;
+				padding: 0 10px;
+				cursor: pointer;
+			}
+			@-moz-keyframes gotop{
+				from{
+					opacity: 1;
+					transform: scale(1.2);
+					text-shadow: 0 0 10px pink;
+				}
+				to{
+					opacity: 0.3;
+					transform: scale(1);
+					text-shadow: 0 0 0;
+				}
+			}
 		</style>
 	</head>
 
@@ -138,19 +162,14 @@
 		<div class="container-fluid container_iframe">
 			
 		</div>
+		<div class="gotop">
+			↑
+		</div>
 		<iframe src="http://www.1993sc.com/html5" name="mf" id="mf"></iframe>
 		<canvas></canvas>
 		<script type="text/javascript">
 			$(function() {
-//				function iframeSize() {
-//					$("iframe").css({
-//						height: $(window).height() - 50
-//					})
-//				}
-//				iframeSize()
-//				$(window).on("resize", function() {
-//					iframeSize()
-//				}) 
+
 				function iframeTextChang(){
 					$(".container_iframe").empty().css({
 						"z-index":1
@@ -171,9 +190,20 @@
 					e.stopPropagation() 
 					return false
 				})
+				$(window).scroll(function(){
+					if($(this).scrollTop()>600){
+						$(".gotop").css({
+							display:"block"
+						}).click(function(){
+							$("body,html").animate({
+								scrollTop:"0"
+							},300)
+						})
+					}
+				})
 			})
 		</script>
-		<script src="canvas.js"></script>
+		<script src="canvas.min.js"></script>
 	</body>
 
 </html>
