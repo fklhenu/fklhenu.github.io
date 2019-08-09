@@ -190,14 +190,16 @@
 					e.stopPropagation() 
 					return false
 				})
+				
+				$(".gotop").click(function(){
+							$("body,html").stop().animate({
+								scrollTop:10
+							},"slow")
+						})
 				$(window).scroll(function(){
 					if($(this).scrollTop()>600){
 						$(".gotop").css({
 							display:"block"
-						}).click(function(){
-							$("body,html").stop().animate({
-								scrollTop:"10"
-							},300)
 						})
 					}else{
 						$(".gotop").css({
