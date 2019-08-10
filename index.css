@@ -70,7 +70,7 @@ body {
 			}
 			.aside_doc{
 				position: fixed !important;
-				z-index: 10;
+				z-index: 10 !important;
 			}
 			.aside_doc .dropdown-toggle{
 				position: absolute;
