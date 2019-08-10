@@ -4,8 +4,8 @@ $(function() {
 					$(".container_iframe").empty().css({
 						"z-index":1
 					});
-					$(".dropdown").css({
-						"z-index":1
+					$(".aside_doc").css({
+						"z-index":10
 					});
 					$(".aside_doc").find().not(".dropdown-toggle").remove()
 					$("#mf").contents().find("body").find("ul").eq(0).addClass("dropdown-menu").appendTo(".aside_doc")
