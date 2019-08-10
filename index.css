@@ -65,9 +65,6 @@ body {
 				}
 			}
 			/*设置左侧导航*/
-			.container{
-				max-width: 768px !important;
-			}
 			.dropdown,.dropdown-menu,.dropdown-toggle{
 				transition: all 0.5s;
 			}
@@ -77,9 +74,9 @@ body {
 			}
 			.aside_doc .dropdown-toggle{
 				position: absolute;
-				right: 10px;
 				z-index: 10;
 			}
+			
 			.aside_doc .dropdown-menu{
 				width: 224px;
 				z-index: 8;
