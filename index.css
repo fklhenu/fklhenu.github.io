@@ -87,7 +87,7 @@ body {
 				background-color: #f9f9f9eb;
 			}
 			.aside_doc .dropdown-menu ul{
-				padding: revert;
+				padding-left: 30px;
 			}
 			/*@media only screen and (max-width:996px ) {
 				.aside_doc .dropdown-menu{
