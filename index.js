@@ -7,8 +7,7 @@ $(function() {
 					$(".aside_doc").css({
 						"z-index":10
 					});
-					$(".aside_doc").find(".dropdown-menu").remove()
-					console.log(13)
+					$(".aside_doc").addClass("open").find(".dropdown-menu").remove()
 					$("#mf").contents().find("body").find("ul").eq(0).addClass("dropdown-menu").appendTo(".aside_doc")
 					$("#mf").contents().find("body").children().appendTo(".container_iframe")
 					$("#mf").contents().find("head link[rel='stylesheet']").appendTo("head")
