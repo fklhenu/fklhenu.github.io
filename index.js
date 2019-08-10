@@ -22,9 +22,9 @@ $(function() {
 				}) 
 				//试图阻止移动端触摸默认行为
 				$(document).on("touchmove", function(e) {
-					e.preventDefault() 
-					e.stopPropagation() 
-					return false
+					//e.preventDefault() 
+					//e.stopPropagation() 
+					//return false
 				})
 				//回到顶部
 				$(".gotop").click(function(){
