@@ -73,11 +73,7 @@ body {
 			}
 			.aside_doc{
 				position: fixed !important;
-				z-index: 5;
-				width: 224px;
-				height: 100%;
-				overflow: auto;
-				background-color: #f9f9f9eb;
+				z-index: 10;
 			}
 			.aside_doc .dropdown-toggle{
 				position: absolute;
@@ -85,11 +81,15 @@ body {
 				z-index: 10;
 			}
 			.aside_doc .dropdown-menu{
-				z-index: 5;
+				width: 224px;
+				z-index: 8;
 				top: 0;
+				max-height: 600px;
+				overflow-y: auto;
+				background-color: #f9f9f9eb;
 			}
 			.aside_doc .dropdown-menu ul{
-				padding: initial !important;
+				padding: revert;
 			}
 			/*@media only screen and (max-width:996px ) {
 				.aside_doc .dropdown-menu{
