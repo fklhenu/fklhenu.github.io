@@ -1,4 +1,4 @@
-* { touch-action: pan-y; }  /*解决移动端不能阻止默认行为*/
+/** { touch-action: pan-y; }  解决移动端不能阻止默认行为*/
 .dropdown-backdrop{ /*去掉 webkit 内核bootstrap 下拉菜单多余遮罩 */
 	display: none !important;
 }
