@@ -1,3 +1,4 @@
+* { touch-action: pan-y; } 
 body {
 				/*background-color: #ecf0f1 !important;*/
 				overflow: auto;
