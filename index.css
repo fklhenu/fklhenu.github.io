@@ -80,12 +80,16 @@ body {
 				background-color: #f9f9f9eb;
 			}
 			.aside_doc .dropdown-toggle{
-				/*display: none;*/
-				/*z-index: 5;*/
+				position: absolute;
+				right: 10px;
+				z-index: 10;
 			}
 			.aside_doc .dropdown-menu{
-				/*z-index: 5;*/
+				z-index: 5;
 				top: 0;
+			}
+			.aside_doc .dropdown-menu ul{
+				padding: initial !important;
 			}
 			/*@media only screen and (max-width:996px ) {
 				.aside_doc .dropdown-menu{
