@@ -42,5 +42,15 @@ $(function() {
 							display:"none"
 						})
 					}
+					
+					if($(this).scrollTop()>50){
+						$(".aside_doc").css({
+							top:0
+						})
+					}else{
+						$(".aside_doc").css({
+							top:"50px"
+						})
+					}
 				})
 			})
