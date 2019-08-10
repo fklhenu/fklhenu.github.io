@@ -63,3 +63,38 @@ body {
 					text-shadow: 0 0 0;
 				}
 			}
+			/*设置左侧导航*/
+			.container{
+				max-width: 768px !important;
+			}
+			.dropdown,.dropdown-menu,.dropdown-toggle{
+				transition: all 0.5s;
+			}
+			.aside_doc{
+				position: fixed !important;
+				z-index: 5;
+				width: 300px;
+				height: 100%;
+				overflow: auto;
+				background-color: #f9f9f9eb;
+			}
+			.aside_doc .dropdown-toggle{
+				display: none;
+				/*z-index: 5;*/
+			}
+			.aside_doc .dropdown-menu{
+				/*z-index: 5;*/
+			}
+			@media only screen and (max-width:996px ) {
+				.aside_doc .dropdown-menu{
+					display: none;
+				}
+				.aside_doc .dropdown-toggle{
+					display: inline-block;
+				}
+			}
+			@media only screen and (min-width: 996px) {
+				.container{
+					margin:auto 0 auto auto;
+				}
+			}
