@@ -33,6 +33,9 @@ $(function() {
 							},"slow")
 						})
 				$(window).scroll(function(){
+					$(".aside_doc .dropdown-menu").css({
+						"z-index":8
+					})
 					if($(this).scrollTop()>600){
 						$(".gotop").css({
 							display:"block"
