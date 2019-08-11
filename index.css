@@ -100,3 +100,6 @@ body {
 					margin:auto 0 auto auto;
 				}
 			}*/
+.site-header{
+	display: none;
+}
