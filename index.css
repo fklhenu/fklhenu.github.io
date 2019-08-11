@@ -27,12 +27,13 @@ body {
 			}
 			
 			iframe {
-				width: 0;
+				/*width: 0;
 				height: 0;
 				margin: 0;
 				padding: 0;
 				border: none;
-				outline: none;
+				outline: none;*/
+				display: none;
 			}
 			.container_iframe{
 				position: relative;
