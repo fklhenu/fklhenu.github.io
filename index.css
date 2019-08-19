@@ -8,10 +8,12 @@
 	display: none !important;
 }
 
-.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+@media only screen and (max-width: 768px) {
+	/*设置下拉菜单的文字颜色*/
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
 	color: white;
+	}
 }
-
 
 /*正式css*/
 
@@ -48,7 +50,6 @@ iframe {
 .container_iframe {
 	position: relative;
 	z-index: 5;
-	/*background-color: rgba(255,255,255,0.5);*/
 }
 
 canvas {
